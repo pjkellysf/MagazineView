@@ -1,10 +1,10 @@
 //*******************************************************************
-//  MagazineRack.java       Authors: Clifford/Kelly
+//  MagazineView.java       Authors: Clifford/Kelly
 //
 //  Driver to exercise the MagazineList collection.
 //*******************************************************************
 
-public class MagazineRack
+public class MagazineView
 {
    //----------------------------------------------------------------
    //  Creates a MagazineList object, adds several magazines to the
