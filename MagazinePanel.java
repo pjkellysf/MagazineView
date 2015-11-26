@@ -6,13 +6,19 @@
     import javax.swing.JPanel;
     import javax.swing.JButton;
     import javax.swing.JLabel;
+    import javax.swing.JTextField;
+    import javax.swing.JTextArea;
     import java.awt.*;
     import java.awt.event.*;
 
     public class MagazinePanel extends JPanel
 {
+        MagazineList rack = new MagazineList();
+        
         private JButton btnAdd;
         private JButton btnDelete;
+        private JTextField inputText;
+        private JTextArea textArea;
         //-----------------------------------------------------------------
         // Constructor: Sets up this panel to listen for button events.
         //-----------------------------------------------------------------
@@ -26,67 +32,41 @@
             btnDelete = new JButton ("Delete All Magazines");
             btnDelete.addActionListener (new DeleteButtonListener());
             add (btnDelete);
+            //Text Input Field
+            inputText = new JTextField(20);
+            add (inputText);
+            //Scrollable Text Area
+            textArea = new JTextArea(10, 20);
+            add (textArea);
             //Frame preferences
-            setBackground (Color.cyan);
             setPreferredSize (new Dimension(400, 400));
-        }
-        
-        //*****************************************************************
-        // Represents the listener for all mouse events.
-        //*****************************************************************
-
-        private class ShipMouseListener implements MouseListener,
-                                            MouseMotionListener
-        {
-        //--------------------------------------------------------------
-        //  Updates the x and y position of the mouse when moved
-        //--------------------------------------------------------------
-        public void mouseMoved (MouseEvent event)
-        {
-            repaint();
-        }
-        //--------------------------------------------------------------
-        //  Reports the x and y position of the mouse when clicked
-        //--------------------------------------------------------------
-        public void mousePressed (MouseEvent event)
-        {
-            repaint();
-        }
-
-        public void mouseReleased (MouseEvent event) {
-			repaint();
-	}
-
-        //--------------------------------------------------------------
-        //  Provide empty definitions for unused event methods.
-        //--------------------------------------------------------------
-        public void mouseEntered (MouseEvent event) {}
-        public void mouseExited (MouseEvent event) {}
-        public void mouseClicked (MouseEvent event) {}
-        public void mouseDragged (MouseEvent event) {}
         }
 
         private class AddButtonListener implements ActionListener
         {
         //--------------------------------------------------------------
-        // Updates the counter and label when the button is pushed.
+        // Adds a magazine when clicked
         //--------------------------------------------------------------
             public void actionPerformed (ActionEvent event)
             {
                 System.out.println("Adding");
-                repaint();
+                //TEST CODE
+                rack.insert (new Magazine("A"));
+                rack.insert (new Magazine("B"));
+                System.out.println(rack);
             }
         }
         
         private class DeleteButtonListener implements ActionListener
         {
         //--------------------------------------------------------------
-        // Updates the counter and label when the button is pushed.
+        // Deletes all magazines when clicked
         //--------------------------------------------------------------
             public void actionPerformed (ActionEvent event)
             {
                 System.out.println("Deleting");
-                repaint();
+                rack.deleteAll();
+                System.out.println(rack);
             }
         }
     }
