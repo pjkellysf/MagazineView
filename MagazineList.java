@@ -38,25 +38,23 @@ public class MagazineList
    }
     
     //----------------------------------------------------------------
-    //  Creates a new MagazineNode object and adds it to the BEGINNING of
-    //  the linked list.
-    //----------------------------------------------------------------
+   //  Creates a new MagazineNode object and adds it to the BEGINNING of
+   //  the linked list.
+   //----------------------------------------------------------------
    public void insert (Magazine mag)
    {
-       if (list != null) {
-            MagazineNode node = new MagazineNode(mag);
-            node.next = list;
-            list = node;
-       }
+        MagazineNode node = new MagazineNode(mag);
+        node.next = list;
+        list = node;
    }
     
-    //----------------------------------------------------------------
-    //  Deletes the next reference in list
-    //----------------------------------------------------------------
+     //----------------------------------------------------------------
+   //  Deletes the next reference in list
+   //----------------------------------------------------------------
    public void deleteAll ()
    {
-
-        list = null;
+       if(list != null)
+            list = null;
    }
 
    //----------------------------------------------------------------
