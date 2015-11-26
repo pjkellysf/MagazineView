@@ -52,7 +52,8 @@
                 System.out.println("Adding");
                 //TEST CODE
                 rack.insert (new Magazine(inputText.getText()));
-                textArea.setText(inputText.getText());
+                textArea.setText(rack.toString());
+                //textArea.setText(inputText.getText());
                 inputText.setText("");
                 //rack.insert (new Magazine("A"));
                 //rack.insert (new Magazine("B"));
