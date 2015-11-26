@@ -51,8 +51,11 @@
             {
                 System.out.println("Adding");
                 //TEST CODE
-                rack.insert (new Magazine("A"));
-                rack.insert (new Magazine("B"));
+                rack.insert (new Magazine(inputText.getText()));
+                textArea.setText(inputText.getText());
+                inputText.setText("");
+                //rack.insert (new Magazine("A"));
+                //rack.insert (new Magazine("B"));
                 System.out.println(rack);
             }
         }
@@ -66,6 +69,7 @@
             {
                 System.out.println("Deleting");
                 rack.deleteAll();
+                textArea.setText("");
                 System.out.println(rack);
             }
         }
