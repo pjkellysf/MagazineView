@@ -14,28 +14,32 @@ public class MagazineView
    {    
       MagazineList rack = new MagazineList();
       
-       //Adds new magazines to the END of the list
-      /*rack.add (new Magazine("Time"));
-      rack.add (new Magazine("Woodworking Today"));
-      rack.add (new Magazine("Communications of the ACM"));
-      rack.add (new Magazine("House and Garden"));
-      rack.add (new Magazine("GQ"));*/
-       
-       //Adds new magazines to the BEGINNING of the list
-       rack.insert (new Magazine("Time"));
-      rack.insert (new Magazine("Woodworking Today"));
-      rack.insert (new Magazine("Communications of the ACM"));
-      rack.insert (new Magazine("House and Garden"));
-      rack.insert (new Magazine("GQ"));
-      
-      System.out.println (rack); 
-       
-       //DELETES the magazines from the list
-       
-       rack.deleteAll();
-       
-       System.out.println ("empty" + rack); 
-       
-       
+        //Adds new magazines to the END of the list
+        rack.add (new Magazine("A"));
+        rack.add (new Magazine("B"));
+        rack.add (new Magazine("C"));
+        rack.add (new Magazine("D"));
+        rack.add (new Magazine("E"));
+
+        System.out.println ("Add at end \n" + rack);
+        rack.deleteAll();
+
+        //Adds new magazines to the BEGINNING of the list
+        rack.insert (new Magazine("A"));
+        rack.insert (new Magazine("B"));
+        rack.insert (new Magazine("C"));
+        rack.insert (new Magazine("D"));
+        rack.insert (new Magazine("E"));
+
+        System.out.println ("Add at beginning \n" + rack);
+        rack.deleteAll(); 
+
+        //DELETES the magazines from the list
+
+        rack.deleteAll();
+
+        System.out.println ("Deletes all \n" + rack);
+        System.out.println (rack); 
+             
    }
 }
