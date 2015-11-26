@@ -49,14 +49,10 @@
         //--------------------------------------------------------------
             public void actionPerformed (ActionEvent event)
             {
-                System.out.println("Adding");
-                //TEST CODE
+                //System.out.println("Adding");
                 rack.insert (new Magazine(inputText.getText()));
                 textArea.setText(rack.toString());
-                //textArea.setText(inputText.getText());
                 inputText.setText("");
-                //rack.insert (new Magazine("A"));
-                //rack.insert (new Magazine("B"));
                 System.out.println(rack);
             }
         }
@@ -68,7 +64,7 @@
         //--------------------------------------------------------------
             public void actionPerformed (ActionEvent event)
             {
-                System.out.println("Deleting");
+                //System.out.println("Deleting");
                 rack.deleteAll();
                 textArea.setText("");
                 System.out.println(rack);
