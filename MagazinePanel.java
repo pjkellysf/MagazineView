@@ -24,20 +24,20 @@
         //-----------------------------------------------------------------
         public MagazinePanel()
        {
+            //Text Input Field
+            inputText = new JTextField(20);
+            add (inputText);
             //Add Magazine Button
             btnAdd = new JButton ("Add Magazine");
             btnAdd.addActionListener (new AddButtonListener());
             add (btnAdd);
+            //Scrollable Text Area
+            textArea = new JTextArea(10, 20);
+            add (textArea);
             //Delete All Magazines Button
             btnDelete = new JButton ("Delete All Magazines");
             btnDelete.addActionListener (new DeleteButtonListener());
             add (btnDelete);
-            //Text Input Field
-            inputText = new JTextField(20);
-            add (inputText);
-            //Scrollable Text Area
-            textArea = new JTextArea(10, 20);
-            add (textArea);
             //Frame preferences
             setPreferredSize (new Dimension(400, 400));
         }
