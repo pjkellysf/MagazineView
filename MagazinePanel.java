@@ -53,7 +53,6 @@
                 rack.insert (new Magazine(inputText.getText()));
                 textArea.setText(rack.toString());
                 inputText.setText("");
-                System.out.println(rack);
             }
         }
         
@@ -67,7 +66,6 @@
                 //System.out.println("Deleting");
                 rack.deleteAll();
                 textArea.setText("");
-                System.out.println(rack);
             }
         }
     }
