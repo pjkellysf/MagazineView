@@ -1,19 +1,27 @@
-//*******************************************************************
+//********************************************************************
 //  MagazineView.java       Authors: Clifford/Kelly
 //
-//  Driver to exercise the MagazineList collection.
-//*******************************************************************
+//  Draws a spaceship and line at the mouse position.
+//********************************************************************
 
+import javax.swing.JFrame;
 public class MagazineView
-{
-   //----------------------------------------------------------------
-   //  Creates a MagazineList object, adds several magazines to the
-   //  list, then prints it.
-   //----------------------------------------------------------------
-   public static void main (String[] args)
-   {    
-      MagazineList rack = new MagazineList();
+    {
+    //-----------------------------------------------------------------
+    // Creates and displays the application frame.
+    //-----------------------------------------------------------------
+    public static void main (String[] args)
+    {
+        JFrame frame = new JFrame ("MagazineView");
+        frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add (new MagazinePanel());
+        frame.pack();
+        frame.setVisible(true);
+        
+        MagazineList rack = new MagazineList();
       
+        //TEST CODE
+        /*
         //Adds new magazines to the END of the list
         rack.add (new Magazine("A"));
         rack.add (new Magazine("B"));
@@ -39,7 +47,7 @@ public class MagazineView
         rack.deleteAll();
 
         System.out.println ("Deletes all \n" + rack);
-        System.out.println (rack); 
-             
-   }
+        System.out.println (rack);
+        */
+    }
 }
