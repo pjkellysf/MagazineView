@@ -1,5 +1,5 @@
 //********************************************************************
-//  MagazinePanel.java       Authors: Clifford/Kelly
+//  MagazinePanel.java       Authors: Clifford/Dos Santos/Kelly
 //
 //  Represents the primary drawing panel for the Magazine program.
 //********************************************************************
