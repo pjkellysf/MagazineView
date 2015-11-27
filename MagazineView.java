@@ -1,5 +1,5 @@
 //********************************************************************
-//  MagazineView.java       Authors: Clifford/Kelly
+//  MagazineView.java       Authors: Clifford/Dos Santos/Kelly
 //
 //  Draws a spaceship and line at the mouse position.
 //********************************************************************
