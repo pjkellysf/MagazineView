@@ -1,5 +1,5 @@
 //********************************************************************
-//  Magazine.java       Authors: Clifford/Kelly
+//  Magazine.java       Authors: Clifford/Dos Santos/Kelly
 //
 //  Represents a single magazine.
 //********************************************************************
