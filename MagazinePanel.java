@@ -25,14 +25,15 @@
         public MagazinePanel()
        {
             //Text Input Field
-            inputText = new JTextField(20);
+            inputText = new JTextField(10);
+            inputText.addActionListener (new InputTextListener());
             add (inputText);
             //Add Magazine Button
             btnAdd = new JButton ("Add Magazine");
             btnAdd.addActionListener (new AddButtonListener());
             add (btnAdd);
             //Scrollable Text Area
-            textArea = new JTextArea(10, 20);
+            textArea = new JTextArea(15, 20);
             add (textArea);
             //Delete All Magazines Button
             btnDelete = new JButton ("Delete All Magazines");
@@ -40,6 +41,20 @@
             add (btnDelete);
             //Frame preferences
             setPreferredSize (new Dimension(400, 400));
+        }
+        
+        private class InputTextListener implements ActionListener
+        {
+        //--------------------------------------------------------------
+        // Adds a magazine when clicked
+        //--------------------------------------------------------------
+            public void actionPerformed (ActionEvent event)
+            {
+                //System.out.println("Adding");
+                rack.insert (new Magazine(inputText.getText()));
+                textArea.setText(rack.toString());
+                inputText.setText("");
+            }
         }
 
         private class AddButtonListener implements ActionListener
