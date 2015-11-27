@@ -1,2 +1,2 @@
 # MagazineView
-Class assignment using LinkedList to add and delete magazines from a magazine rack.
+Creates a linked list that allows users to add and delete 'magazines objects' from a magazine rack.
