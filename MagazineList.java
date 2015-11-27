@@ -1,5 +1,5 @@
 //*******************************************************************
-//  MagazineList.java       Authors: Clifford/Kelly
+//  MagazineList.java       Authors: Clifford/Dos Santos/Kelly
 //
 //  Represents a collection of magazines.
 //*******************************************************************
