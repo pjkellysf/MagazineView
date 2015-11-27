@@ -1,7 +1,7 @@
 //********************************************************************
 //  MagazinePanel.java       Authors: Clifford/Kelly
 //
-//  Represents the primary drawing panel for the Spaceship program.
+//  Represents the primary drawing panel for the Magazine program.
 //********************************************************************
     import javax.swing.JPanel;
     import javax.swing.JButton;
