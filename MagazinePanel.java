@@ -63,25 +63,24 @@
             public void actionPerformed (ActionEvent event)
             {
 
-				JButton buttonClicked = (JButton)event.getSource();
+		JButton buttonClicked = (JButton)event.getSource();
 
-				if(buttonClicked == btnAdd){
+		if(buttonClicked == btnAdd){
                 	rack.insert (new Magazine(inputText.getText()));
                	 	textArea.setText(rack.toString());
                 	inputText.setText("");
-				}
+		}
 
-				if(buttonClicked == btnDelete){
-                //System.out.println("Deleting");
-					rack.deleteAll();
+		if(buttonClicked == btnDelete){
+			rack.deleteAll();
                 	textArea.setText("");
-				}
+		}
 
-				if(buttonClicked == btnDeleteMag){
-					String deletedMagazine = inputText.getText();
-					rack.deleteSpecific (deletedMagazine);
-                    inputText.setText("");
-				}
+		if(buttonClicked == btnDeleteMag){
+			String deletedMagazine = inputText.getText();
+			rack.deleteSpecific (deletedMagazine);
+                	inputText.setText("");
+		}
             }
         }
 }
