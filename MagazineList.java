@@ -36,7 +36,7 @@ public class MagazineList
          current.next = node;
       }
    }
-    
+
     //----------------------------------------------------------------
    //  Creates a new MagazineNode object and adds it to the BEGINNING of
    //  the linked list.
@@ -47,14 +47,19 @@ public class MagazineList
         node.next = list;
         list = node;
    }
-    
-     //----------------------------------------------------------------
+
+   //----------------------------------------------------------------
    //  Deletes the next reference in list
    //----------------------------------------------------------------
    public void deleteAll ()
    {
        if(list != null)
             list = null;
+   }
+
+   public void deleteMag(Magazine mag){
+
+
    }
 
    //----------------------------------------------------------------
@@ -75,22 +80,26 @@ public class MagazineList
       return result;
    }
 
-   //*****************************************************************
-   //  An inner class that represents a node in the magazine list.
-   //  The public variables are accessed by the MagazineList class.
-   //*****************************************************************
+   //  An inner class that represents a magazine node in the magazine list.
+   //// basically sets a magazine to a new node.
+
    private class MagazineNode
    {
       public Magazine magazine;
       public MagazineNode next;
 
-      //--------------------------------------------------------------
-      //  Sets up the node
-      //--------------------------------------------------------------
       public MagazineNode (Magazine mag)
       {
          magazine = mag;
          next = null;
       }
+      public String toString(){
+    	  return "deleting" ;
+      }
    }
+
+
+ public void deleteMagazine(String mag){
+	 System.out.println(" deleting " + mag);
+ }
 }

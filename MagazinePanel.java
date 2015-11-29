@@ -11,76 +11,76 @@
     import java.awt.*;
     import java.awt.event.*;
 
-    public class MagazinePanel extends JPanel
-{
+    public class MagazinePanel extends JPanel{
+
+    private JButton btnAdd;
+    private JButton btnDelete;
+    private JButton btnDeleteMag;
+    private JTextField inputText;
+    private JTextArea textArea;
+
+
         MagazineList rack = new MagazineList();
-        
-        private JButton btnAdd;
-        private JButton btnDelete;
-        private JTextField inputText;
-        private JTextArea textArea;
+
+
         //-----------------------------------------------------------------
         // Constructor: Sets up this panel to listen for button events.
         //-----------------------------------------------------------------
-        public MagazinePanel()
-       {
+        public MagazinePanel(){
+
+
             //Text Input Field
             inputText = new JTextField(10);
-            inputText.addActionListener (new InputTextListener());
             add (inputText);
+
             //Add Magazine Button
-            btnAdd = new JButton ("Add Magazine");
-            btnAdd.addActionListener (new AddButtonListener());
+            btnDeleteMag = new JButton ("Delete This Magazine");
+            btnDeleteMag.addActionListener (new ButtonListener());
+            add (btnDeleteMag);
+
+
+
+            //Add Magazine Button
+            btnAdd = new JButton ("Add This Magazine");
+            btnAdd.addActionListener (new ButtonListener());
             add (btnAdd);
             //Scrollable Text Area
             textArea = new JTextArea(15, 20);
             add (textArea);
             //Delete All Magazines Button
             btnDelete = new JButton ("Delete All Magazines");
-            btnDelete.addActionListener (new DeleteButtonListener());
+            btnDelete.addActionListener (new ButtonListener());
             add (btnDelete);
             //Frame preferences
             setPreferredSize (new Dimension(400, 400));
         }
-        
-        private class InputTextListener implements ActionListener
-        {
-        //--------------------------------------------------------------
-        // Adds a magazine when clicked
-        //--------------------------------------------------------------
-            public void actionPerformed (ActionEvent event)
-            {
-                //System.out.println("Adding");
-                rack.insert (new Magazine(inputText.getText()));
-                textArea.setText(rack.toString());
-                inputText.setText("");
-            }
-        }
 
-        private class AddButtonListener implements ActionListener
+        private class ButtonListener implements ActionListener
         {
         //--------------------------------------------------------------
         // Adds a magazine when clicked
         //--------------------------------------------------------------
             public void actionPerformed (ActionEvent event)
             {
-                //System.out.println("Adding");
-                rack.insert (new Magazine(inputText.getText()));
-                textArea.setText(rack.toString());
-                inputText.setText("");
-            }
-        }
-        
-        private class DeleteButtonListener implements ActionListener
-        {
-        //--------------------------------------------------------------
-        // Deletes all magazines when clicked
-        //--------------------------------------------------------------
-            public void actionPerformed (ActionEvent event)
-            {
+
+				JButton buttonClicked = (JButton)event.getSource();
+
+				if(buttonClicked == btnAdd){
+                	rack.insert (new Magazine(inputText.getText()));
+               	 	textArea.setText(rack.toString());
+                	inputText.setText("");
+				}
+
+				if(buttonClicked == btnDelete){
                 //System.out.println("Deleting");
-                rack.deleteAll();
-                textArea.setText("");
+					rack.deleteAll();
+                	textArea.setText("");
+				}
+
+				if(buttonClicked == btnDeleteMag){
+					String deletedMagazine = inputText.getText();
+					rack.deleteMagazine (deletedMagazine);
+				}
             }
         }
-    }
+}
