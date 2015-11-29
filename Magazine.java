@@ -4,7 +4,7 @@
 //  Represents a single magazine.
 //********************************************************************
 
-public class Magazine 
+public class Magazine
 {
    private String title;
 
@@ -12,7 +12,7 @@ public class Magazine
    //  Sets up the new magazine with its title.
    //-----------------------------------------------------------------
    public Magazine (String newTitle)
-   {    
+   {
       title = newTitle;
    }
 
