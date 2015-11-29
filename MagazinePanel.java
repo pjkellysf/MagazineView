@@ -79,7 +79,8 @@
 
 				if(buttonClicked == btnDeleteMag){
 					String deletedMagazine = inputText.getText();
-					rack.deleteMagazine (deletedMagazine);
+					rack.deleteSpecific (deletedMagazine);
+                    inputText.setText("");
 				}
             }
         }
