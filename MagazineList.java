@@ -109,24 +109,25 @@ public class MagazineList
    public void deleteSpecific (String str)
    {
        MagazineNode current = list;
+       
+       System.out.println("Looking for " + str);
+       
+       int count = 0;
 
       while (current != null)
       {
+          count += 1;
+          
           String testString = "" + current.magazine;
           
           if(testString.equals(str))
           {
               //Match found in the list
-              System.out.println("Found match for " + str);
+              System.out.println("Found match for " + str + " at position " + count);
           }
           
           current = current.next;
           
-          if(current == null){
-              
-              //Reached the last item in the list and no matches
-              System.out.println("No match in the list for " + str);
-          }
       }
    }
 }
