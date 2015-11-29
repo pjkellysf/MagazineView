@@ -102,4 +102,31 @@ public class MagazineList
  public void deleteMagazine(String mag){
 	 System.out.println(" deleting " + mag);
  }
+ 
+	//----------------------------------------------------------------
+	//  Looks for a specific string in the list and deletes it if found. 
+	//----------------------------------------------------------------
+   public void deleteSpecific (String str)
+   {
+       MagazineNode current = list;
+
+      while (current != null)
+      {
+          String testString = "" + current.magazine;
+          
+          if(testString.equals(str))
+          {
+              //Match found in the list
+              System.out.println("Found match for " + str);
+          }
+          
+          current = current.next;
+          
+          if(current == null){
+              
+              //Reached the last item in the list and no matches
+              System.out.println("No match in the list for " + str);
+          }
+      }
+   }
 }
