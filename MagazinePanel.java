@@ -65,7 +65,8 @@
 
 		JButton buttonClicked = (JButton)event.getSource();
 
-		if(buttonClicked == btnAdd){
+		if(buttonClicked == btnAdd & (!inputText.getText().equals(""))){
+			System.out.println(inputText.getText());
                 	rack.insert (new Magazine(inputText.getText()));
                	 	textArea.setText(rack.toString());
                 	inputText.setText("");
@@ -81,6 +82,6 @@
 			rack.deleteSpecific (deletedMagazine);
                 	inputText.setText("");
 		}
-            }
-        }
+     }
+   }
 }
