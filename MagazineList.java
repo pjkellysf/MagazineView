@@ -49,16 +49,30 @@ public class MagazineList
    }
 
    //----------------------------------------------------------------
-   //  Deletes the next reference in list
+   //  Deletes the first reference in list
    //----------------------------------------------------------------
    public void deleteAll ()
    {
        if(list != null)
             list = null;
    }
-
-   public void deleteMag(Magazine mag){
-
+    //----------------------------------------------------------------
+   //  Deletes a specific reference in list
+   //----------------------------------------------------------------
+   public void delete(String str){
+       
+       MagazineNode current = list;
+       
+       if (current.magazine.toString().equals(str)){
+           
+           list = current.next;     
+       }
+       
+       else
+           
+       {
+          //add part b here
+       }
 
    }
 
@@ -98,10 +112,6 @@ public class MagazineList
       }
    }
 
-
- public void deleteMagazine(String mag){
-	 System.out.println(" deleting " + mag);
- }
  
 	//----------------------------------------------------------------
 	//  Looks for a specific string in the list and deletes it if found. 
