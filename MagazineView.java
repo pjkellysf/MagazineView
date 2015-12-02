@@ -1,7 +1,7 @@
 //********************************************************************
 //  MagazineView.java       Authors: Clifford/Dos Santos/Kelly
 //
-//  Draws a spaceship and line at the mouse position.
+//  Creates frame and panel for MagazineView assignment.
 //********************************************************************
 
 import javax.swing.JFrame;
