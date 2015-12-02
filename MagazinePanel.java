@@ -66,21 +66,21 @@
 		JButton buttonClicked = (JButton)event.getSource();
 
 		if(buttonClicked == btnAdd & (!inputText.getText().equals(""))){
-			System.out.println(inputText.getText());
-                	rack.insert (new Magazine(inputText.getText()));
-               	 	textArea.setText(rack.toString());
-                	inputText.setText("");
+          		rack.insert (new Magazine(inputText.getText()));
+            		textArea.setText(rack.toString());
+            		inputText.setText("");
 		}
 
 		if(buttonClicked == btnDelete){
-			rack.deleteAll();
-                	textArea.setText("");
+            		rack.deleteAll();
+            		textArea.setText("");
 		}
 
 		if(buttonClicked == btnDeleteMag){
 			String deletedMagazine = inputText.getText();
-			rack.deleteSpecific (deletedMagazine);
-                	inputText.setText("");
+			rack.delete (deletedMagazine);
+            		inputText.setText("");
+            		textArea.setText(rack.toString());
 		}
      }
    }
