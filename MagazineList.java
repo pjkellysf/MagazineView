@@ -61,17 +61,32 @@ public class MagazineList
    //----------------------------------------------------------------
    public void delete(String str){
        
+       MagazineNode previous = list;
        MagazineNode current = list;
        
+       //Matches first item in list
        if (current.magazine.toString().equals(str)){
            
            list = current.next;     
        }
-       
        else
-           
        {
-          //add part b here
+            while (current != null)
+          {
+             //Matches between two nodes
+             if((current.next != null)&&(current.magazine.toString().equals(str)))
+            {
+                //System.out.println("Match at " + current.magazine.toString());
+                previous.next = current.next;
+            }
+                //Matches at the end of the list
+                else if((current.next == null)&&(current.magazine.toString().equals(str)))
+             {
+                 previous.next = null;
+             }
+             previous = current;
+             current = current.next;
+          }
        }
 
    }
