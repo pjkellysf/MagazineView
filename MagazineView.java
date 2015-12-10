@@ -1,7 +1,8 @@
 //********************************************************************
 //  MagazineView.java       Authors: Clifford/Dos Santos/Kelly
 //
-//  Creates frame and panel for MagazineView assignment.
+//  Creates frame and panel for MagazineView assignment
+//  Assigment number 8, Due December 10th, CS 111B, 1:00pm section
 //********************************************************************
 
 import java.awt.Dimension;
