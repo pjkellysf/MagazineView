@@ -1,6 +1,6 @@
 //********************************************************************
 //  Magazine.java       Authors: Clifford/Dos Santos/Kelly
-//
+//  Assigment number 8, Due December 10th, CS 111B, 1:00pm section
 //  Represents a single magazine.
 //********************************************************************
 
