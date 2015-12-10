@@ -60,14 +60,14 @@ public class MagazineList
    //  Deletes a specific reference in list
    //----------------------------------------------------------------
    public void delete(String str){
-       
+
        MagazineNode previous = list;
        MagazineNode current = list;
-       
+
        //Matches first item in list
        if (current.magazine.toString().equals(str)){
-           
-           list = current.next;     
+
+           list = current.next;
        }
        else
        {

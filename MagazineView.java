@@ -4,6 +4,8 @@
 //  Creates frame and panel for MagazineView assignment.
 //********************************************************************
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
 public class MagazineView
     {
@@ -15,7 +17,7 @@ public class MagazineView
         JFrame frame = new JFrame ("MagazineView");
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().add (new MagazinePanel());
-        frame.pack();
+        frame.setSize(500,400);
         frame.setVisible(true);
     }
 }
